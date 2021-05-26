@@ -2,9 +2,10 @@
 
 version 0.1.0
 
+Utility functions, colour palettes and themes for the upcoming online Global TB Report.
+
 Authors: Philippe Glaziou, Hazim Timimi, Irwin Law
 
-Utility functions, colour palettes and themes for the online Global TB Report.
 
 Example:
 
