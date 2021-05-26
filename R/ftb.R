@@ -3,6 +3,10 @@
 #' Formats vectors of numbers (<2 billion)
 #'
 #' @param x Vector of numbers
+#' @examples
+#' ftb(348838)
+#' ftb(0.0359)
+#' ftb(0.00036)
 #'
 #' @export
 #'

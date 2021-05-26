@@ -12,3 +12,9 @@ ftb(x)
 \description{
 Formats vectors of numbers (<2 billion)
 }
+\examples{
+ftb(348838)
+ftb(0.0359)
+ftb(0.00036)
+
+}
