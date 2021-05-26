@@ -1,0 +1,17 @@
+Package: gtbreport
+Type: Package
+Title: gtbreport utils, colour palettes and theme
+Version: 0.1.0
+Authors@R: c(
+    person("Philippe", "Glaziou", email = "glazioup@who.int", role = c("aut", "cre")),
+    person("Hazim", "Timimi", email = "timimih@who.int", role = c("aut")),
+    person("Irwin", "Law", email = "lawi@who.int", role = c("aut"))
+    )
+Maintainer: Philippe Glaziou <glazioup@who.int>
+Description: Colour palettes, theme and utility functions for compiling the online WHO Global TB Report.
+Depends: R (>= 4.0.0),
+    ggplot2 (>= 3.3.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
