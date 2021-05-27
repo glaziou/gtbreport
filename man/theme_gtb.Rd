@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_gtb.R
 \name{theme_gtb}
 \alias{theme_gtb}
-\title{ggplot2 theme for the online WHO Global TB Report}
+\title{ggplot2 theme for the WHO Global TB Report}
 \usage{
 theme_gtb(base_size = 14, base_family = "", axis_text_size = 8)
 }
@@ -11,10 +11,10 @@ theme_gtb(base_size = 14, base_family = "", axis_text_size = 8)
 
 \item{base_family}{base font family}
 
-\item{axis_text_size}{axis font size}
+\item{axis_text_size}{font size for axis text in pts.}
 }
 \description{
-ggplot2 theme for the online WHO Global TB Report
+ggplot2 theme for the WHO Global TB Report
 }
 \examples{
 p <- ggplot(mtcars, aes(wt, mpg)) +

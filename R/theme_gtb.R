@@ -1,8 +1,8 @@
-#' ggplot2 theme for the online WHO Global TB Report
+#' ggplot2 theme for the WHO Global TB Report
 #'
 #' @param base_size base font size, given in pts.
 #' @param base_family base font family
-#' @param axis_text_size axis font size
+#' @param axis_text_size font size for axis text in pts.
 #' @author: Hazim Timimi
 #' @examples
 #' p <- ggplot(mtcars, aes(wt, mpg)) +
@@ -24,7 +24,7 @@ theme_gtb <-
 
     ggplot2::theme(
       # Text format:
-      plot.margin = margin(30, 5, 30, 5),
+      plot.margin = ggplot2::margin(30, 5, 30, 5),
 
       # Legend format
       legend.position = "bottom",
