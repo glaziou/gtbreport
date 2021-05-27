@@ -1,7 +1,7 @@
 Package: gtbreport
 Type: Package
 Title: gtbreport utils, colour palettes and theme
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Philippe", "Glaziou", email = "glazioup@who.int", role = c("aut", "cre")),
     person("Hazim", "Timimi", email = "timimih@who.int", role = c("aut")),

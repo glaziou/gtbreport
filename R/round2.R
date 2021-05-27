@@ -5,4 +5,6 @@
 #'
 #' @export
 #'
-round2 <- function(x, digits = 0) sign(x) * trunc(abs(x) * 10^digits + 0.5) / 10^digits
+round2 <-
+  function(x, digits = 0)
+    sign(x) * trunc(abs(x) * 10 ^ digits + 0.5) / 10 ^ digits

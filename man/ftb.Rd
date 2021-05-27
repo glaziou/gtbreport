@@ -12,9 +12,41 @@ ftb(x)
 \description{
 Formats vectors of numbers (<2 billion)
 }
+\details{
+GTB rounding convention:
+
+- 0 is written as "0" (output "0")
+
+- values under 0.1 are written "<0.1" ("<0.1")
+
+- from 0.1 to under 1 are rounded to 2
+
+  significant figures (0.NN)
+
+- from 1 to under 10 are rounded to 2 significant figures ("N.N")
+
+- 10 to under 100 are rounded to 2 significant figures ("NN")
+
+- 100 to under 1000 are rounded to 3 significant figures ("NNN")
+
+- 1000 upwards are rounded to 3 significant figures ("N NN0 000")
+
+- data that are not reported, but could be are represented
+  as empty cells and should be accompanied by a footnote.
+
+- data that cannot be calculated, either because of missing
+  data, data was not requested, or any other reason are represented
+  with a dash.
+
+When the number represents thousands, show numbers between 0.01 and 0.1:
+
+- values under 0.01 are written "<0.01"
+
+- values between 0.01 and under 0.1 are rounded to
+  2 significant figures ("0.0NN")
+}
 \examples{
 ftb(348838)
-ftb(0.0359)
-ftb(0.00036)
+ftb(c(0.0359, 0.00036))
 
 }
