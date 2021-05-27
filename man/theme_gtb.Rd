@@ -4,15 +4,25 @@
 \alias{theme_gtb}
 \title{ggplot2 theme for the online WHO Global TB Report}
 \usage{
-theme_gtb(base_size = 14, base_family = "")
+theme_gtb(base_size = 14, base_family = "", axis_text_size = 8)
 }
 \arguments{
 \item{base_size}{base font size, given in pts.}
 
 \item{base_family}{base font family}
+
+\item{axis_text_size}{axis font size}
 }
 \description{
 ggplot2 theme for the online WHO Global TB Report
+}
+\examples{
+p <- ggplot(mtcars, aes(wt, mpg)) +
+     geom_point() + facet_wrap(~ cyl)
+print(p)
+p2 <- p + theme_gtb()
+print(p2)
+
 }
 \author{
 : Hazim Timimi

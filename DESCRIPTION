@@ -1,7 +1,7 @@
 Package: gtbreport
 Type: Package
 Title: gtbreport utils, colour palettes and theme
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Philippe", "Glaziou", email = "glazioup@who.int", role = c("aut", "cre")),
     person("Hazim", "Timimi", email = "timimih@who.int", role = c("aut")),
@@ -12,6 +12,8 @@ Description: Colour palettes, theme and utility functions for compiling the onli
 Depends: R (>= 4.0.0),
     ggplot2 (>= 3.3.0)
 License: MIT + file LICENSE
+URL: https://github.com/glaziou/gtbreport
+BugReports: https://github.com/glaziou/gtbreport/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
