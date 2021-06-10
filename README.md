@@ -1,5 +1,5 @@
 # gtbreport
-version 0.1.2
+version 0.1.3
 
 Utility functions, colour palettes and themes for the upcoming online Global TB Report.
 
@@ -9,7 +9,6 @@ Philippe Glaziou, Hazim Timimi, Irwin Law
 
 ## Examples:
 
-# ftb()
 ftb(23456)
 
 [1] "23 500"
@@ -18,7 +17,6 @@ ftb(c(0.0359, 0.00036))
 
 [1] "0.036" "<0.01"
 
-# theme_gtb()
 p <- ggplot(mtcars, aes(wt, mpg)) + geom_point() + facet_wrap(~ cyl)
 
 print(p)
