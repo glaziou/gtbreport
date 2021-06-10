@@ -15,7 +15,7 @@
 #' @export
 #'
 theme_gtb <-
-  function(base_size = 14,
+  function(base_size = 12,
            base_family = "",
            axis_text_size = 8) {
     faint_gray <- "#CCCCCC"

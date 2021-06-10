@@ -4,7 +4,7 @@
 \alias{theme_gtb}
 \title{ggplot2 theme for the WHO Global TB Report}
 \usage{
-theme_gtb(base_size = 14, base_family = "", axis_text_size = 8)
+theme_gtb(base_size = 12, base_family = "", axis_text_size = 8)
 }
 \arguments{
 \item{base_size}{base font size, given in pts.}
