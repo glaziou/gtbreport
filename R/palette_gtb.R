@@ -59,10 +59,10 @@ palette_gtb <- function(var_name){
         # --------------------------------------------
 
         # incidence or notifications in females: purple
-        "female" = "#6E12C5",
+        "female" = "#B71BFA",
 
         # incidence or notifications in males: green
-        "male" = "#90FC17",
+        "male" = "#1C9611",
 
         # --------------------------------------------
         # Colours for treatment outcome charts
