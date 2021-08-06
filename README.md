@@ -1,5 +1,5 @@
 # gtbreport
-version 0.1.4
+version 0.1.6
 
 Utility functions, colour palettes and themes for the upcoming online Global TB Report.
 
