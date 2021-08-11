@@ -17,5 +17,5 @@ Based on a function by John Fox:
 http://tolstoy.newcastle.edu.au/R/help/05/04/2715.html
 }
 \examples{
-in2word(324513)
+int2word(324513)
 }

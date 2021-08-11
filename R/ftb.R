@@ -89,7 +89,7 @@ int2word <- function(x) {
   #' http://tolstoy.newcastle.edu.au/R/help/05/04/2715.html
   #' @param x an integer
   #' @examples
-  #' in2word(324513)
+  #' int2word(324513)
   #' @export
 
   if (x == 0) {
