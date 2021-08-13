@@ -83,6 +83,8 @@ ftb <- Vectorize(function(x) {
 
 
 
+#' Converts integers into English words,
+#'
 int2word <- function(x) {
   #' Converts integers into English words,
   #' Based on a function by John Fox:
@@ -90,8 +92,15 @@ int2word <- function(x) {
   #' @param x an integer
   #' @examples
   #' int2word(324513)
+  #' int2word(-3)
+  #'
   #' @export
-
+  if (x < 0){
+    x <- abs(x)
+    neg <- TRUE
+  } else {
+    neg <- FALSE
+  }
   if (x == 0) {
     print("zero")
   } else{
@@ -175,9 +184,12 @@ int2word <- function(x) {
     suffixes <- c("thousand", "million", "billion", "trillion")
     if (length(x) > 1)
       return(trim(sapply(x, helper)))
+    if (neg == TRUE)
+      return(paste('minus', helper(x)))
     helper(x)
   }
 
 }
+
 
 

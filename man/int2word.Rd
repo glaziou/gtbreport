@@ -2,9 +2,7 @@
 % Please edit documentation in R/ftb.R
 \name{int2word}
 \alias{int2word}
-\title{Converts integers into English words,
-Based on a function by John Fox:
-http://tolstoy.newcastle.edu.au/R/help/05/04/2715.html}
+\title{Converts integers into English words,}
 \usage{
 int2word(x)
 }
@@ -18,4 +16,6 @@ http://tolstoy.newcastle.edu.au/R/help/05/04/2715.html
 }
 \examples{
 int2word(324513)
+int2word(-3)
+
 }
