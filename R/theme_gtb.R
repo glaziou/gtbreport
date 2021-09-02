@@ -17,7 +17,7 @@
 theme_gtb <-
   function(base_size = 12,
            base_family = "",
-           axis_text_size = 8) {
+           axis_text_size = 9) {
     faint_gray <- "#CCCCCC"
     gray <- "#BCBCBC"
     charcoal <- "#222222"
