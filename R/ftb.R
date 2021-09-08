@@ -58,7 +58,7 @@ ftb <- Vectorize(function(x) {
     x2 <- signif(x, dg)
 
     trailing.0 <- x2 == round2(x) & one2ten == TRUE
-    trailing0 <- x2 * 10 == round2(x * 10) & zero2one == TRUE
+    trailing0 <- x2 * 10 == round2(x * 10) & zero2one == TRUE & x2 < 1
 
     x2 <-
       format(
