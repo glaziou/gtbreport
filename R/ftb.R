@@ -25,19 +25,16 @@
 #'
 #' - data that cannot be calculated, either because of missing
 #'   data, data was not requested, or any other reason are represented
-#'   with a dash.
+#'   with a dash, including when a number is greater than the limit
+#'   of 32-bit integers, i.e. 2e9.
 #'
-#' When the number represents thousands, show numbers between 0.01 and 0.1:
-#'
-#' - values under 0.01 are written "<0.01"
-#'
-#' - values between 0.01 and under 0.1 are rounded to
-#'   2 significant figures ("0.0NN")
 #'
 #' @param x Vector of numbers
 #' @examples
-#' ftb(348838)
-#' ftb(c(0.0359, 0.00036))
+#' ftb(3488381)
+#' ftb(c(12345, 987.23, 100, 15.678, 10, 3.598, 1, 0.359, 0.1, 0.036))
+#' ftb(NA)
+#' ftb(987654321987)
 #'
 #' @export
 #'
@@ -47,38 +44,24 @@ ftb <- Vectorize(function(x) {
   #' @param x vector of values
   #' @export
   stopifnot(!is.character(x))
-  stopifnot(x < 2e9)
 
-  if (!is.na(x)) {
-    smallpos <- x > 0 & x < 0.01
-    one2ten <- x >= 1 & x < 10
-    zero2one <- x >= 0.1 & x < 1
+  fstring = "-"
 
-    dg <- ifelse(abs(x) > 0.01 & abs(x) < 100, 2, 3)
-    x2 <- signif(x, dg)
+  if (!is.na(x) & is.numeric(x) & x < 2e9) {
 
-    trailing.0 <- x2 == round2(x) & one2ten == TRUE
-    trailing0 <- x2 * 10 == round2(x * 10) & zero2one == TRUE & x2 < 1
+    fstring <-  ifelse(x==0, "0",
+                       ifelse(signif(x, 1) < 0.1, "<0.1",
+                              ifelse(signif(x, 2) < 1, formatC(signif(x,2), format="f", digits=2),
+                                     ifelse(signif(x, 2) < 10, formatC(signif(x,2), format="f", digits=1),
+                                            ifelse(signif(x, 3) < 100, formatC(signif(x, 2), big.mark=" ", format="d"),
+                                                   formatC(signif(x, 3), big.mark=" ", format="d"))))))
 
-    x2 <-
-      format(
-        x2,
-        digits = dg,
-        nsmall = 0L,
-        big.mark = " ",
-        justify = 'right',
-        drop0trailing = T,
-        scientific = F
-      )
-    if (smallpos)
-      x2 <- '<0.01'
-    if (trailing.0)
-      x2 <- paste0(x2, '.0')
-    if (trailing0)
-      x2 <- paste0(x2, '0')
-  } else
-    x2 <- '-'
-  return(x2)
+
+
+
+  }
+
+  return(fstring)
 }, 'x')
 
 
